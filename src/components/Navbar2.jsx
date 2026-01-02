@@ -30,7 +30,7 @@ const Navbar2 = () => {
         <>
             <nav
                 className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-in-out
-                ${scrolled ? 'w-[95%] lg:w-[60%] py-3 px-5 top-3' : 'w-[95%] lg:w-[60%] py-3 px-5 top-6'}
+                ${scrolled ? 'w-[95%] lg:w-[60%] py-3 px-5 top-3' : 'w-[95%] lg:w-[60%] py-3 px-5 top-3 md:top-6'}
                 rounded-full flex justify-between items-center
                 bg-white/5 backdrop-blur-2xl border border-white/5 shadow-lg group hover:bg-white/10`}
             >
