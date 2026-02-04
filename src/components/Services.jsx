@@ -1,7 +1,7 @@
 import React from 'react';
 import ServiceCard from './ServiceCard';
 
-const Services = () => {
+const Services = ({ headerAlignment = "left" }) => {
     const servicesData = [
         {
             icon: (
@@ -35,16 +35,41 @@ const Services = () => {
         }
     ];
 
+    const getHeaderClasses = () => {
+        switch (headerAlignment) {
+            case 'center':
+                return {
+                    container: "mb-16 text-center flex flex-col items-center",
+                    heading: "text-4xl md:text-5xl font-bold text-white max-w-2xl mx-auto",
+                    paragraph: "text-gray-400 mt-4 max-w-4xl mx-auto"
+                };
+            case 'right':
+                return {
+                    container: "mb-16 text-right flex flex-col items-end",
+                    heading: "text-4xl md:text-5xl font-bold text-white max-w-2xl ml-auto",
+                    paragraph: "text-gray-400 mt-4 max-w-4xl ml-auto"
+                };
+            default: // left
+                return {
+                    container: "mb-16 text-left",
+                    heading: "text-4xl md:text-5xl font-bold text-white max-w-2xl",
+                    paragraph: "text-gray-400 mt-4 max-w-4xl"
+                };
+        }
+    };
+
+    const headerClasses = getHeaderClasses();
+
     return (
-        <section className="py-24 px-4 relative">
+        <section className="py-8 px-4 relative">
             <div className='max-w-7xl mx-auto'>
                 {/* Section Header (Optional) */}
-                <div className="mb-16">
+                <div className={headerClasses.container}>
                     <span className="text-blue-400 font-medium tracking-wider uppercase mb-3 block leading-tight">Our Services</span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white max-w-2xl">
+                    <h2 className={headerClasses.heading}>
                         Elevate Your Brand Digitally
                     </h2>
-                    <p className="text-gray-400 mt-4">Our tailored solutions empower your online presence, ensuring growth and success in the digital landscape.</p>
+                    <p className={headerClasses.paragraph}>Our tailored solutions empower your online presence, ensuring growth and success in the digital landscape.</p>
                 </div>
 
                 {/* Grid */}

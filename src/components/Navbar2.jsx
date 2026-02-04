@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import CollaborateButton from './CollaborateButton';
 import logo from '../assets/images/tntlogo-white.png'
 import mobileLogo from '../assets/images/tntlogo_mobile.png'
@@ -21,7 +22,7 @@ const Navbar2 = () => {
         { name: 'Home', href: '/' },
         { name: 'Work', href: '/work' },
         { name: 'Services', href: '/services' },
-        { name: 'About us', href: '/aboutus' },
+        { name: 'About us', href: '/about' },
         { name: 'Pricing', href: '/pricing' },
         { name: 'Courses', href: '/courses' }
     ];
@@ -35,22 +36,22 @@ const Navbar2 = () => {
                 bg-white/5 backdrop-blur-2xl border border-white/5 shadow-lg group hover:bg-white/10`}
             >
                 {/* Logo */}
-                <a href="/" className="shrink-0 hover:opacity-100 transition-opacity">
+                <Link to="/" className="shrink-0 hover:opacity-100 transition-opacity">
                     <img src={logo} alt="TNT Logo" className="hidden md:block w-32 object-contain" />
                     <img src={mobileLogo} alt="TNT Logo" className="block md:hidden w-10 object-contain" />
-                </a>
+                </Link>
 
                 {/* Desktop Navigation - Clean & Simple */}
                 <div className="hidden lg:flex items-center gap-8">
                     {navItems.map((item) => (
-                        <a
+                        <Link
                             key={item.name}
-                            href={item.href}
+                            to={item.href}
                             className="text-sm font-medium text-white hover:text-white transition-all duration-300 relative group/link"
                         >
                             {item.name}
                             <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover/link:w-full"></span>
-                        </a>
+                        </Link>
                     ))}
                 </div>
 
@@ -79,15 +80,15 @@ const Navbar2 = () => {
                 ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}
             >
                 {navItems.map((item, index) => (
-                    <a
+                    <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className="text-2xl font-light text-white/80 hover:text-white hover:scale-110 transition-all duration-300"
                         style={{ transitionDelay: `${index * 50}ms` }}
                         onClick={() => setIsOpen(false)}
                     >
                         {item.name}
-                    </a>
+                    </Link>
                 ))}
                 <div className="mt-8 scale-110">
                     <CollaborateButton mobile />

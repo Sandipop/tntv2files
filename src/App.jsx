@@ -1,41 +1,38 @@
-import Navbar from './components/Navbar.jsx'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home.jsx'
 import Navbar2 from './components/Navbar2.jsx'
-import Hero from './components/Hero.jsx'
-import LogoLoop from './components/LogoLoop.jsx'
-
-import Services from './components/Services.jsx'
-import WorkingSmarter from './components/WorkingSmarter.jsx'
-import LatestProjects from './components/LatestProjects.jsx'
-import CustomerStories from './components/CustomerStories.jsx'
-import Testimonials from './components/Testimonials.jsx'
-import FAQ from './components/FAQ.jsx'
-import CTA from './components/CTA.jsx'
 import Footer from './components/Footer.jsx'
-
-
+import Work from './pages/Work.jsx'
+import ServicePage from './pages/ServicePage.jsx'
+import AboutUs from './pages/AboutUs.jsx'
+import Pricing from './pages/Pricing.jsx'
+import Courses from './pages/Courses.jsx'
+import Helio from './pages/casestudies/HelioExpect.jsx'
 
 
 const App = () => {
   return (
-    <div className='bg-[#060010] min-h-screen'>
-      {/* <Navbar /> */}
-      <Navbar2 />
-      <Hero />
-      <LogoLoop />
-      <Services />
-      <LatestProjects />
-      <WorkingSmarter />
-      <CustomerStories />
-      <Testimonials />
-      <FAQ />
-      <CTA />
-      <Footer />
+    <BrowserRouter>
+
+      <div className='bg-[#060010] min-h-screen'>
+        <Navbar2 />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/services" element={<ServicePage />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/work/HelioExpect" element={<Helio />} />
+
+        </Routes>
 
 
+        <Footer />
+      </div>
 
-
-
-    </div>
+    </BrowserRouter>
   )
 }
 
