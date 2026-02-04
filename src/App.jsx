@@ -10,11 +10,13 @@ import Courses from './pages/Courses.jsx'
 import HelioExpect from './pages/casestudies/HelioExpect.jsx'
 import Plannora from './pages/casestudies/Plannora.jsx'
 import RainforestAi from './pages/casestudies/RainforestAi.jsx'
+import ScrollToTop from './components/ScrollToTop.jsx'
 
 
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
 
       <div className='bg-[#060010] min-h-screen'>
         <Navbar2 />

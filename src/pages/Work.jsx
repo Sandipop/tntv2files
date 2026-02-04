@@ -5,6 +5,7 @@ import ProjectCard from '../components/ProjectCard.jsx'
 import LatestProjects from '../components/LatestProjects.jsx'
 
 const Work = () => {
+    
     return (
         <div>
             <NextHero

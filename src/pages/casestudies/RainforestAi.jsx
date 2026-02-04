@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import thumbnail from '../../assets/rainForest-assets/rainforest-thumbnail.webp';
 import userjourney from '../../assets/rainForest-assets/rainforest-userjourney.webp';
@@ -18,9 +18,7 @@ import Gallery from '../../components/casestudy/Gallery';
 import Outcome from '../../components/casestudy/Outcome';
 
 const RainforestAi = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+
 
     const summaryText = [
         "Rainforest emerged from a growing need among creators, marketers, and designers for a simplified, engaging way to harness AI for visual storytelling. It offers an intuitive platform where users can generate, customize, and explore high-quality images through natural language prompts—without needing deep technical expertise.",

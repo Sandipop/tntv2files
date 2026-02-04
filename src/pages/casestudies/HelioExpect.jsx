@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import thumbnail from '../../assets/HelioExpect-assets/helioExp.webp';
 import userjourney from '../../assets/HelioExpect-assets/user-journey.webp';
@@ -18,9 +18,7 @@ import Gallery from '../../components/casestudy/Gallery';
 import Outcome from '../../components/casestudy/Outcome';
 
 const HelioExpect = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+
 
     const summaryText = [
         "HelioExpect emerged from a critical need identified by solar plant operators and industry experts—to streamline performance monitoring, reduce downtime, and enhance energy efficiency across solar infrastructures.",

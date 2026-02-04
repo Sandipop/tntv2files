@@ -11,6 +11,7 @@ import FAQ from '../components/FAQ.jsx'
 import CTA from '../components/CTA.jsx'
 
 const Home = () => {
+    
     return (
         <>
             <div >
