@@ -19,15 +19,16 @@ const LatestProjects = ({ showHeading = true, showFilter = true, headerAlign = '
         },
         {
             id: 2,
-            title: "Plannora",
-            category: "Branding",
-            image: plannora_thumbnail
+            title: "Rainforest",
+            category: "Development",
+            link: "/work/RainforestAi",
+            image: rainforest_thumbnail
         },
         {
             id: 3,
-            title: "Rainforest",
-            category: "Development",
-            image: rainforest_thumbnail
+            title: "Plannora",
+            category: "Branding",
+            image: plannora_thumbnail
         },
         {
             id: 4,

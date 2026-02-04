@@ -7,7 +7,9 @@ import ServicePage from './pages/ServicePage.jsx'
 import AboutUs from './pages/AboutUs.jsx'
 import Pricing from './pages/Pricing.jsx'
 import Courses from './pages/Courses.jsx'
-import Helio from './pages/casestudies/HelioExpect.jsx'
+import HelioExpect from './pages/casestudies/HelioExpect.jsx'
+import Plannora from './pages/casestudies/Plannora.jsx'
+import RainforestAi from './pages/casestudies/RainforestAi.jsx'
 
 
 const App = () => {
@@ -24,7 +26,9 @@ const App = () => {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/courses" element={<Courses />} />
-          <Route path="/work/HelioExpect" element={<Helio />} />
+          <Route path="/work/HelioExpect" element={<HelioExpect />} />
+          <Route path="/work/Plannora" element={<Plannora />} />
+          <Route path="/work/RainforestAi" element={<RainforestAi />} />
 
         </Routes>
 
