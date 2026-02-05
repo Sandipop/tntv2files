@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import CollaborateButton from './CollaborateButton';
 import logo from '../assets/images/tntlogo-white.png'
 import mobileLogo from '../assets/images/tntlogo_mobile.png'
@@ -8,6 +8,7 @@ import mobileLogo from '../assets/images/tntlogo_mobile.png'
 const Navbar2 = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
 
     // Handle scroll effect for navbar
     useEffect(() => {
@@ -43,16 +44,22 @@ const Navbar2 = () => {
 
                 {/* Desktop Navigation - Clean & Simple */}
                 <div className="hidden lg:flex items-center gap-8">
-                    {navItems.map((item) => (
-                        <Link
-                            key={item.name}
-                            to={item.href}
-                            className="text-sm font-medium text-white hover:text-white transition-all duration-300 relative group/link"
-                        >
-                            {item.name}
-                            <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover/link:w-full"></span>
-                        </Link>
-                    ))}
+                    {navItems.map((item) => {
+                        const isActive = item.href === '/'
+                            ? location.pathname === '/'
+                            : location.pathname.startsWith(item.href);
+
+                        return (
+                            <Link
+                                key={item.name}
+                                to={item.href}
+                                className={`text-sm font-medium transition-all duration-300 relative group/link ${isActive ? 'text-white' : 'text-white/80 hover:text-white'}`}
+                            >
+                                {item.name}
+                                <span className={`absolute -bottom-1 left-0 h-[2px] bg-white transition-all duration-300 group-hover/link:w-full ${isActive ? 'w-full' : 'w-0'}`}></span>
+                            </Link>
+                        );
+                    })}
                 </div>
 
                 {/* Actions */}
@@ -79,17 +86,23 @@ const Navbar2 = () => {
             <div className={`fixed inset-0 bg-black/95 backdrop-blur-3xl z-40 transition-transform duration-500 ease-in-out flex flex-col justify-center items-center gap-8
                 ${isOpen ? 'translate-y-0' : '-translate-y-full'}`}
             >
-                {navItems.map((item, index) => (
-                    <Link
-                        key={item.name}
-                        to={item.href}
-                        className="text-2xl font-light text-white/80 hover:text-white hover:scale-110 transition-all duration-300"
-                        style={{ transitionDelay: `${index * 50}ms` }}
-                        onClick={() => setIsOpen(false)}
-                    >
-                        {item.name}
-                    </Link>
-                ))}
+                {navItems.map((item, index) => {
+                    const isActive = item.href === '/'
+                        ? location.pathname === '/'
+                        : location.pathname.startsWith(item.href);
+
+                    return (
+                        <Link
+                            key={item.name}
+                            to={item.href}
+                            className={`text-2xl font-light transition-all duration-300 ${isActive ? 'text-white scale-110' : 'text-white/80 hover:text-white hover:scale-110'}`}
+                            style={{ transitionDelay: `${index * 50}ms` }}
+                            onClick={() => setIsOpen(false)}
+                        >
+                            {item.name}
+                        </Link>
+                    );
+                })}
                 <div className="mt-8 scale-110">
                     <CollaborateButton mobile />
                 </div>
