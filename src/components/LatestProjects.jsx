@@ -13,64 +13,82 @@ const LatestProjects = ({ showHeading = true, showFilter = true, headerAlign = '
         {
             id: 1,
             title: "Helio Expect",
-            category: "UI/UX Design",
+            category: ["UI/UX Design", "Branding"],
             link: "/work/HelioExpect",
             image: helio_thumbnail
         },
         {
             id: 2,
             title: "Rainforest",
-            category: "Development",
+            category: ["UI/UX Design",],
             link: "/work/RainforestAi",
             image: rainforest_thumbnail
         },
         {
             id: 3,
             title: "Plannora",
-            category: "Branding",
+            category: ["Branding", "UI/UX Design"],
             image: plannora_thumbnail
         },
         {
             id: 4,
-            title: "Aura Farm",
-            category: "UI/UX Design",
+            title: "Howzat",
+            category: ["UI/UX Design"],
             image: null
         },
         {
             id: 5,
-            title: "Echo Valley",
-            category: "Marketing",
+            title: "Thumb Cricket",
+            category: ["UI/UX Design"],
             image: null
         },
         {
             id: 6,
-            title: "NexGen",
-            category: "Development",
+            title: "TypeStack",
+            category: ["Branding"],
             image: null
         },
         {
             id: 7,
-            title: "NexGen",
-            category: "Development",
+            title: "Salt",
+            category: ["UI/UX Design"],
             image: null
         },
         {
             id: 8,
-            title: "NexGen",
-            category: "Development",
+            title: "Loomerang",
+            category: ["UI/UX Design"],
             image: null
         },
         {
             id: 9,
-            title: "NexGen",
-            category: "Development",
+            title: "Physmo",
+            category: ["UI/UX Design"],
+            image: null
+        },
+        {
+            id: 10,
+            title: "Space",
+            category: ["UI/UX Design"],
+            image: null
+        },
+        {
+            id: 11,
+            title: "Logo designs",
+            category: ["UI/UX Design"],
+            image: null
+        },
+        {
+            id: 12,
+            title: "Adv designs",
+            category: ["UI/UX Design"],
             image: null
         },
     ];
 
     const allFiltered = activeCategory === "All"
         ? projects
-        : projects.filter(project => project.category === activeCategory);
+        : projects.filter(project => project.category.includes(activeCategory));
 
     const filteredProjects = projectCount ? allFiltered.slice(0, projectCount) : allFiltered;
 

@@ -110,7 +110,7 @@ const Courses = () => {
   return (
     <div className='bg-[#060010] min-h-screen font-sans'>
       <NextHero
-        title="Courses"
+        title="Course"
         subtext="At TagNtarget, we help small startups tackle the world’s biggest challenges with tailored solutions,"
       />
 
@@ -130,7 +130,7 @@ const Courses = () => {
       </div> */}
 
       {/* Introduction Section */}
-      <section className="py-20 px-4 relative z-10">
+      <section className="px-4 relative z-10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="text-left">
@@ -166,7 +166,7 @@ const Courses = () => {
       {/* Timeline Section */}
       <section className="py-20 px-4 relative overflow-hidden">
         {/* Background elements */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-linear-to-b from-transparent via-blue-500/20 to-transparent hidden md:block"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-linear-to-b from-transparent via-blue-500/50 to-transparent hidden md:block"></div>
 
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">

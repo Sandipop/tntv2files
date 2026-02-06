@@ -23,7 +23,7 @@ const ProjectCard = ({ title, category, image, link }) => {
             <div className="py-6 px-8 relative">
                 <div className="flex justify-between items-end">
                     <div>
-                        <span className="text-sm font-medium text-blue-400 mb-2 block">{category}</span>
+                        <span className="text-sm font-medium text-blue-400 mb-2 block">{Array.isArray(category) ? category.join(", ") : category}</span>
                         <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
                     </div>
 
