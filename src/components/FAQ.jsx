@@ -40,7 +40,7 @@ const FAQ = () => {
         },
         {
             question: "What types of projects do you work on?",
-            answer: "We specialize in a wide range of design projects including high-converting web designs, mobile application interfaces, complete branding packages, marketing collaterals, pitch decks, and digital products. We handle both UI/UX and visual design requirements."
+            answer: "We specialize in enhancing existing products and apps. By applying UX principles and leveraging valuable user feedback, we help you optimize your product's performance and drive key metrics."
         },
         {
             question: "I need my designs on an urgent basis. Can you help?",
@@ -52,7 +52,7 @@ const FAQ = () => {
         },
         {
             question: "What is your typical turnaround time for design projects?",
-            answer: "Speed without compromising quality is our motto. For most standard design requests, we deliver initial concepts within 24-48 hours. Larger, more complex projects are broken down into milestones with consistent updates every 2 days to keep momentum going."
+            answer: "We prioritize efficiency and aim to complete most design projects within a few days. The timeline can be adjusted to meet your specific needs. We'll provide regular updates on the project's status."
         }
     ];
 

@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import client1 from '../assets/images/client1-img.webp'
+import client2 from '../assets/images/client2-img.webp'
+import client4 from '../assets/images/client4-img.png'
+import client6 from '../assets/images/client6-img.png'
+import client7 from '../assets/images/client7-img.png'
 
 const Testimonials = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -6,43 +11,43 @@ const Testimonials = () => {
     const testimonials = [
         {
             id: 1,
-            quote: "The team's dedication to our project was unmatched. They delivered a product that exceeded our expectations.",
-            name: "John Doe",
-            role: "CEO, TechCorp",
-            image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop",
-            text: "From the initial consultation to the final delivery, every step was handled with professionalism and expertise."
+            quote: "Focusing on UX that boosted sales.",
+            name: "Vijay Roy",
+            role: "Founder of Loomerang",
+            image: client1,
+            text: "They designed our e-commerce platform, focusing on UX that boosted sales. Great team, very responsive, and flexible. Highly recommend!"
         },
         {
             id: 2,
-            quote: "An incredible experience working with this agency. Their creativity transformed our brand identity completely.",
-            name: "Jane Smith",
-            role: "Marketing Director, CreativeFlow",
-            image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop",
-            text: "We saw a 200% increase in engagement after launching our new design system. Highly recommended!"
+            quote: "Nailed our brand redesign, capturing our vision perfectly.",
+            name: "Navita Pareek",
+            role: "Founder of Rainforest AI",
+            image: client2,
+            text: "They nailed our brand redesign, capturing our vision perfectly. Their work on our logo and website was fantastic. Truly creative and detail-oriented!"
         },
         {
             id: 3,
-            quote: "Professional, timely, and innovative. They solved complex problems with elegant solutions.",
-            name: "Michael Brown",
-            role: "CTO, InnovationLabs",
-            image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop",
-            text: "The scalability of the code they wrote allows us to grow without worrying about technical debt."
+            quote: "Creating a product that both our users and team love.",
+            name: "Shaharyar Shamshi",
+            role: "Founder of HelioExpect",
+            image: client7,
+            text: "The team revamped our UI/UX, creating a product that both our users and team love. Great communication and execution throughout the project!"
         },
         {
             id: 4,
-            quote: "The best design partner we've ever had. They truly understood our vision and brought it to life.",
-            name: "Emily Davis",
-            role: "Founder, StartUp Inc",
-            image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop",
-            text: "Their attention to detail is second to none. The final product is pixel-perfect and performs beautifully."
+            quote: "Exceeded our expectations with fresh and modern website design.",
+            name: "Dainel Bunting",
+            role: "Founder of Howzat",
+            image: client4,
+            text: "This agency exceeded our expectations with fresh and modern website design. They really understood our brand and delivered on time."
         },
         {
             id: 5,
-            quote: "Exceeded all expectations. A truly collaborative and inspiring process from start to finish.",
+            quote: "Loved their creative visuals and strategy.",
             name: "David Wilson",
             role: "Product Manager, Enterprise Co",
-            image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1887&auto=format&fit=crop",
-            text: "Communication was seamless, and the results speak for themselves. A top-tier agency."
+            image: client6,
+            text: "Hired them for a product launch and loved their creative visuals and strategy. A bit slow during busy times, but the end result was worth it."
         }
     ];
 
@@ -133,13 +138,13 @@ const Testimonials = () => {
                                     key={testimonial.id}
                                     className={`${baseStyles} ${transformStyles} ${opacityStyles} flex justify-center items-center`}
                                 >
-                                    <div className="bg-white/5 border border-white/20 backdrop-blur-md p-8 md:p-12 rounded-2xl w-full max-w-3xl h-full flex flex-col justify-between relative group hover:bg-white/10 transition-colors">
+                                    <div className="bg-white/5 border border-white/20 backdrop-blur-md p-8 md:p-12 rounded-2xl w-full max-w-3xl flex h-full flex-col justify-between relative group hover:bg-white/10 transition-colors">
 
-                                        <blockquote className="relative z-10 text-xl md:text-2xl font-medium leading-relaxed mb-6">
+                                        <blockquote className="relative z-10 text-xl md:text-2xl font-medium leading-relaxed">
                                             "{testimonial.quote}"
                                         </blockquote>
 
-                                        <p className="relative z-10 text-gray-400 mb-8 line-clamp-3">
+                                        <p className="relative z-10 text-gray-400 line-clamp-3 mb-12">
                                             {testimonial.text}
                                         </p>
 

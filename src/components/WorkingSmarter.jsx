@@ -34,7 +34,7 @@ const WorkingSmarter = ({
     const flexDirectionClass = alignment === "right" ? "lg:flex-row-reverse" : "lg:flex-row";
 
     return (
-        <section className="bg-[#060010] text-white py-24 px-4 relative overflow-hidden">
+        <section className="bg-[#060010] text-white py-16 px-4 relative overflow-hidden">
             <div className={`max-w-7xl mx-auto flex flex-col ${flexDirectionClass} items-center gap-16`}>
 
                 {/* Image Side */}
@@ -85,7 +85,7 @@ const WorkingSmarter = ({
                     </div>
 
                     <div className="mt-12">
-                        <Button />
+                        {/* <Button /> */}
                     </div>
                 </div>
             </div>

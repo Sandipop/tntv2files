@@ -9,6 +9,7 @@ import CustomerStories from '../components/CustomerStories.jsx'
 import Testimonials from '../components/Testimonials.jsx'
 import FAQ from '../components/FAQ.jsx'
 import CTA from '../components/CTA.jsx'
+import workingimg from '../assets/images/workingimg.png'
 
 const Home = () => {
     
@@ -19,7 +20,7 @@ const Home = () => {
                 <Hero />
                 <LogoLoop />
                 <Services />
-                <WorkingSmarter />
+                <WorkingSmarter imageSrc={workingimg} />
                 <LatestProjects  showHeading={true} showFilter={true} projectCount={6} />
                 <CustomerStories />
                 <Testimonials />
