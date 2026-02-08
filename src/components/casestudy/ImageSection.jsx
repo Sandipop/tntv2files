@@ -10,7 +10,7 @@ const ImageSection = ({ title, description, image, altText, backgroundClass = "b
                 </p>
             )}
             <div className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
-                <div className={`${backgroundClass} p-8 flex items-center justify-center min-h-[500px]`}>
+                <div className={`${backgroundClass} p-4 sm:p-8 flex items-center justify-center min-h-full`}>
                     <img
                         src={image}
                         alt={altText}

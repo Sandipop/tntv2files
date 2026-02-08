@@ -7,7 +7,7 @@ const Gallery = ({ title, images, backgroundClass = "bg-linear-to-b from-white t
 
             <div className="rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
                 {images.map((img, index) => (
-                    <div key={index} className={`${backgroundClass} p-8 flex items-center justify-center min-h-[500px]`}>
+                    <div key={index} className={`${backgroundClass} p-8 flex items-center justify-center min-h-full`}>
                         <img
                             src={img.src}
                             alt={img.alt || title}

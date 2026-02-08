@@ -3,7 +3,7 @@ import React from 'react';
 const Showcase = ({ image, altText }) => {
     return (
         <div className="mb-22 rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
-            <div className="bg-linear-to-b from-gray-800 to-[#060010] p-12 flex items-center justify-center min-h-[500px]">
+            <div className="bg-linear-to-b from-gray-800 to-[#060010] p-4 sm:p-8 flex items-center justify-center min-h-full">
                 <img
                     src={image}
                     alt={altText}
