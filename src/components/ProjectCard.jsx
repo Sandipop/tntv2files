@@ -5,7 +5,7 @@ const ProjectCard = ({ title, category, image, link }) => {
         <div className="group  relative w-full bg-white/0 backdrop-blur-lg shadow-xl rounded-2xl overflow-hidden border border-white/20 hover:border-white/20 transition-all duration-500 hover:-translate-y-2">
             {/* Thumbnail Container */}
             <div className="relative h-64 w-full overflow-hidden bg-gray-800">
-                <div className="absolute inset-0 backdrop-grayscale group-hover:backdrop-grayscale-0 transition-all duration-500 z-10" />
+                <div className="absolute inset-0 backdrop-grayscale-1 group-hover:backdrop-grayscale-0 transition-all duration-500 z-10" />
                 {image ? (
                     <img
                         src={image}

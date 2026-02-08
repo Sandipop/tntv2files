@@ -1,4 +1,7 @@
+import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
+import Loader from './components/Loader.jsx'
 import Home from './pages/Home.jsx'
 import Navbar2 from './components/Navbar2.jsx'
 import Footer from './components/Footer.jsx'
@@ -11,12 +14,29 @@ import HelioExpect from './pages/casestudies/HelioExpect.jsx'
 import Plannora from './pages/casestudies/Plannora.jsx'
 import RainforestAi from './pages/casestudies/RainforestAi.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
+import TermsConditions from './pages/TermsConditions.jsx'
 
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <BrowserRouter>
       <ScrollToTop />
+
+      <AnimatePresence mode="wait">
+        {isLoading && <Loader />}
+      </AnimatePresence>
 
       <div className='bg-[#060010] min-h-screen'>
         <Navbar2 />
@@ -31,6 +51,8 @@ const App = () => {
           <Route path="/work/HelioExpect" element={<HelioExpect />} />
           <Route path="/work/Plannora" element={<Plannora />} />
           <Route path="/work/RainforestAi" element={<RainforestAi />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
 
         </Routes>
 

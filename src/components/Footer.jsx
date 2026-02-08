@@ -49,13 +49,13 @@ const Footer = () => {
         { name: 'Services', href: '/services' },
         { name: 'About us', href: '/about' },
         { name: 'Pricing', href: '/pricing' },
-        
+
     ];
 
     const otherPageLinks = [
-        
-        { name: 'Terms & Conditions', href: '#' },
-        { name: 'Privacy Policy', href: '#' },
+
+        { name: 'Terms & Conditions', href: '/terms-conditions' },
+        { name: 'Privacy Policy', href: '/privacy-policy' },
     ];
 
     return (
@@ -71,7 +71,7 @@ const Footer = () => {
                     </p>
                     <div className="flex gap-4">
                         {socialLinks.map((link) => (
-                            <a  target='_blank' 
+                            <a target='_blank'
                                 key={link.name}
                                 href={link.href}
                                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-white/20 hover:scale-110 transition-all duration-300 border border-white/10"
@@ -105,9 +105,9 @@ const Footer = () => {
                         <ul className="space-y-4">
                             {otherPageLinks.map((link) => (
                                 <li key={link.name}>
-                                    <a href={link.href} className="text-sm hover:text-white hover:translate-x-1 transition-all duration-300 inline-block">
+                                    <Link to={link.href} className="text-sm hover:text-white hover:translate-x-1 transition-all duration-300 inline-block">
                                         {link.name}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
